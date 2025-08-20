@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>selamat malam dhebita ❤</title>
+  <meta name="description" content="Ucapan selamat malam untuk Dhebita, dihiasi animasi love." />
+  <style>
+    :root {
+      --bg1: #0b1026;
+      --bg2: #16204a;
+      --accent: #ff7aa2; /* pink love */
+      --text: #e9edff;
+      --glow: rgba(255, 122, 162, 0.6);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, Cantarell, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1px 1px at 30% 20%, rgba(255,255,255,0.6) 0, transparent 2px),
+        radial-gradient(1px 1px at 80% 40%, rgba(255,255,255,0.5) 0, transparent 2px),
+        radial-gradient(1px 1px at 50% 70%, rgba(255,255,255,0.4) 0, transparent 2px),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 90%);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem 1.25rem;
+      max-width: 900px;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-shadow: 0 0 12px rgba(255,255,255,0.15), 0 0 28px var(--glow);
+    }
+
+    .subtitle {
+      opacity: 0.9;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      display: inline-block;
+      padding: 1rem 1.25rem;
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25), 0 0 25px rgba(255, 122, 162, 0.15) inset;
+    }
+
+    .love {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: clamp(1.1rem, 3.2vw, 1.5rem);
+    }
+
+    /* Heart shape built with ::before and ::after */
+    .heart {
+      position: relative;
+      width: 18px; height: 16px;
+      display: inline-block;
+      transform: translateY(-1px);
+      filter: drop-shadow(0 0 8px var(--glow));
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 10px; height: 16px;
+      background: var(--accent);
+      border-radius: 10px 10px 0 0;
+      top: 0;
+    }
+    .heart::before { left: 4px; transform: rotate(-45deg); transform-origin: bottom left; }
+    .heart::after { left: -4px; transform: rotate(45deg); transform-origin: bottom right; }
+
+    /* Floating hearts field */
+    .hearts {
+      position: fixed; inset: 0; pointer-events: none; overflow: hidden;
+    }
+    .hearts span {
+      position: absolute;
+      bottom: -10vh;
+      width: var(--size, 14px);
+      height: var(--size, 12px);
+      opacity: var(--opacity, 0.8);
+      animation: floatUp linear infinite;
+      animation-duration: var(--dur, 10s);
+      animation-delay: var(--delay, 0s);
+      filter: drop-shadow(0 0 8px var(--glow));
+    }
+    .hearts span::before,
+    .hearts span::after {
+      content: "";
+      position: absolute;
+      width: 60%; height: 100%;
+      background: var(--accent);
+      border-radius: 10px 10px 0 0;
+      top: 0;
+    }
+    .hearts span::before { left: 40%; transform: rotate(-45deg); transform-origin: bottom left; }
+    .hearts span::after { left: 0;   transform: rotate(45deg);  transform-origin: bottom right; }
+
+    @keyframes floatUp {
+      0%   { transform: translateY(0) translateX(0) scale(0.8) rotate(0deg); }
+      50%  { transform: translateY(-45vh) translateX(4vw) scale(1) rotate(10deg); }
+      100% { transform: translateY(-95vh) translateX(-4vw) scale(1.1) rotate(-10deg); }
+    }
+
+    /* Pre-programmed variety using nth-child */
+    .hearts span:nth-child(1)  { left: 5%;  --dur: 14s; --delay: 0s;  --size: 12px; --opacity: 0.6; }
+    .hearts span:nth-child(2)  { left: 12%; --dur: 11s; --delay: 2s;  --size: 18px; --opacity: 0.9; }
+    .hearts span:nth-child(3)  { left: 20%; --dur: 16s; --delay: 1s;  --size: 16px; --opacity: 0.7; }
+    .hearts span:nth-child(4)  { left: 28%; --dur: 12s; --delay: 3s;  --size: 22px; --opacity: 0.8; }
+    .hearts span:nth-child(5)  { left: 35%; --dur: 13s; --delay: 0.5s;--size: 14px; --opacity: 0.7; }
+    .hearts span:nth-child(6)  { left: 44%; --dur: 15s; --delay: 2.7s;--size: 24px; --opacity: 0.85;}
+    .hearts span:nth-child(7)  { left: 52%; --dur: 10s; --delay: 1.5s;--size: 16px; --opacity: 0.75;}
+    .hearts span:nth-child(8)  { left: 59%; --dur: 17s; --delay: 3.2s;--size: 20px; --opacity: 0.8; }
+    .hearts span:nth-child(9)  { left: 67%; --dur: 12s; --delay: 0.8s;--size: 14px; --opacity: 0.6; }
+    .hearts span:nth-child(10) { left: 74%; --dur: 15s; --delay: 2.1s;--size: 18px; --opacity: 0.9; }
+    .hearts span:nth-child(11) { left: 82%; --dur: 13s; --delay: 1.3s;--size: 16px; --opacity: 0.7; }
+    .hearts span:nth-child(12) { left: 90%; --dur: 18s; --delay: 0.2s;--size: 22px; --opacity: 0.85;}
+
+    /* Tiny sparkle dots near the title */
+    .sparkles { position: relative; display: inline-block; }
+    .sparkles::after {
+      content: "";
+      position: absolute; inset: -10px -20px;
+      background:
+        radial-gradient(3px 3px at 20% 40%, rgba(255,255,255,0.8), transparent 60%),
+        radial-gradient(2px 2px at 80% 60%, rgba(255,255,255,0.8), transparent 60%),
+        radial-gradient(2px 2px at 55% 30%, rgba(255,255,255,0.7), transparent 60%);
+      pointer-events: none;
+      animation: twinkle 2.5s ease-in-out infinite;
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.7));
+    }
+    @keyframes twinkle {
+      0%,100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    footer {
+      position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);
+      font-size: 0.9rem; opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <!-- floating hearts field -->
+  <div class="hearts" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <main class="container">
+    <h1 class="sparkles">selamat malam dhebita</h1>
+    <div class="card" role="note" aria-label="Ucapan dengan ikon love">
+      <div class="love">
+        <span class="heart" aria-hidden="true"></span>
+        Semoga mimpi indah malam ini
+        <span class="heart" aria-hidden="true"></span>
+      </div>
+    </div>
+  </main>
+
+  <footer>dibuat oleh Alvino untuk Dhebita</footer>
+</body>
+</html>
